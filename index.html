@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caprecon International Development Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <span class="logo-c">C</span>
+                            <span class="logo-ap">APRECON</span>
+                        </div>
+                        <span class="logo-foundation">FOUNDATION</span>
+                    </a>
+                    <nav class="main-nav">
+                        <a href="index.html" class="nav-link active">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="causes.html" class="nav-link">Causes</a>
+                        <a href="programmes.html" class="nav-link">Programmes</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </nav>
+                    <a href="contact.html" class="btn btn-primary">Join Us</a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom-content">
+                    <nav class="secondary-nav">
+                        <a href="volunteers.html" class="secondary-link">Volunteer</a>
+                        <a href="blog.html" class="secondary-link">Our Blogs</a>
+                        <a href="events.html" class="secondary-link">Events</a>
+                        <a href="help.html" class="secondary-link">Help</a>
+                    </nav>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/dollin.holt" target="_blank" class="social-link">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/Caprecon_Fd" target="_blank" class="social-link">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dollinholt" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link active">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="causes.html" class="mobile-nav-link">Causes</a>
+            <a href="programmes.html" class="mobile-nav-link">Programmes</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
+            <a href="events.html" class="mobile-nav-link">Events</a>
+            <a href="news.html" class="mobile-nav-link">News</a>
+            <a href="volunteers.html" class="mobile-nav-link">Volunteer</a>
+            <a href="help.html" class="mobile-nav-link">Help</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&q=80" alt="African community">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle animate-fade-up">Welcome to Caprecon</p>
+                <h1 class="hero-title animate-fade-up" style="animation-delay: 0.1s;">International Development and Humanitarian Foundation</h1>
+                <p class="hero-tagline animate-fade-up" style="animation-delay: 0.2s;">Creating Initiatives that inspire Hope and Dignity.</p>
+                <a href="about.html" class="btn btn-secondary animate-fade-up" style="animation-delay: 0.3s;">
+                    <i data-lucide="play-circle"></i>
+                    Read More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Children education">
+                </div>
+                <div class="about-content reveal-right">
+                    <span class="section-label">Who we are</span>
+                    <h2 class="section-title">About Caprecon International Development Foundation!</h2>
+                    <p>Caprecon International Development Foundation, formerly known as Caprecon Development Consult, is a not-for-profit organization dedicated to training, education, capacity building, advocacy, and consulting services.</p>
+                    <p>Caprecon was founded in 2007 out of a vision to work with the most deprived and marginalized in society, including those affected by instability, natural disasters, environmental adversities, unbearable poverty, and violent conflicts.</p>
+                    <a href="about.html" class="btn btn-secondary">
+                        <i data-lucide="play-circle"></i>
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Mission Section -->
+    <section class="vision-mission section-padding bg-light">
+        <div class="container">
+            <div class="vision-mission-grid">
+                <div class="vision-mission-slider reveal-left">
+                    <div class="slider-images">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80" alt="Community" class="slider-img active">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80" alt="Peace building" class="slider-img">
+                        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=800&q=80" alt="Rural development" class="slider-img">
+                    </div>
+                    <button class="slider-btn slider-prev">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <button class="slider-btn slider-next">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <div class="vision-mission-content reveal-right">
+                    <span class="section-label">What Drives Us!</span>
+                    <h2 class="section-title">Our Vision and Mission</h2>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="vision">Vision</button>
+                        <button class="tab-btn" data-tab="mission">Mission</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="vision">
+                            <p>We envisage a world of peaceful coexistence within and between communities everywhere; where everyone lives in dignity.</p>
+                        </div>
+                        <div class="tab-panel" id="mission">
+                            <p>To empower individuals and communities by equipping them with the knowledge, skills, and resources necessary to overcome their challenges and build sustainable futures.</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Join Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats section-padding bg-dark">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal-up">
+                    <div class="stat-number" data-target="210">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Campaigns</div>
+                </div>
+                <div class="stat-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="stat-number" data-target="250">0</div>
+                    <div class="stat-suffix">K+</div>
+                    <div class="stat-label">Persons Impacted</div>
+                </div>
+                <div class="stat-card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="stat-number" data-target="20">0</div>
+                    <div class="stat-suffix">K+</div>
+                    <div class="stat-label">Youths Empowered</div>
+                </div>
+            </div>
+            <p class="stats-description reveal-up" style="animation-delay: 0.3s;">Caprecon is dedicated to a holistic approach to development, encompassing training, education, capacity building, advocacy, and consulting services.</p>
+        </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section class="causes section-padding bg-dark">
+        <div class="container">
+            <h2 class="section-title text-center text-white reveal-up">Our Causes</h2>
+            <div class="causes-grid">
+                <div class="cause-card reveal-up">
+                    <div class="cause-image">
+                        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&q=80" alt="Education">
+                    </div>
+                    <div class="cause-content">
+                        <h3 class="cause-title">Education for Sustainable Development</h3>
+                        <p class="cause-description">We aim to empower people to work their way out of poverty through education and training. Sadly, many children are denied education.</p>
+                    </div>
+                </div>
+                <div class="cause-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="cause-image">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80" alt="Community Development">
+                    </div>
+                    <div class="cause-content">
+                        <h3 class="cause-title">Community and Rural Development</h3>
+                        <p class="cause-description">We empower rural dwellers, especially women, to escape poverty and improve their standard of living through basic education & health care.</p>
+                    </div>
+                </div>
+                <div class="cause-card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="cause-image">
+                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&q=80" alt="Refugee Care">
+                    </div>
+                    <div class="cause-content">
+                        <h3 class="cause-title">Refugee Care and Humanitarian Assistance</h3>
+                        <p class="cause-description">We aim to minimise the impact of violent conflict, natural disasters, displacement and other emergency situations on victims.</p>
+                    </div>
+                </div>
+                <div class="cause-card reveal-up" style="animation-delay: 0.3s;">
+                    <div class="cause-image">
+                        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&q=80" alt="Gender Equality">
+                    </div>
+                    <div class="cause-content">
+                        <h3 class="cause-title">Gender Dignity and Equality</h3>
+                        <p class="cause-description">In many parts of the world, female education is circumscribed by poverty, ignorance, conflict, cultural repression and restrictive traditions that inhibit women's mobility.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="causes-cta text-center reveal-up" style="animation-delay: 0.4s;">
+                <a href="causes.html" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <section class="partner section-padding">
+        <div class="container">
+            <div class="partner-grid">
+                <div class="partner-intro reveal-left">
+                    <span class="section-label">Caprecon Can Be Your Trusted Partner</span>
+                    <h2 class="section-title">Why Partner With Us?</h2>
+                    <p>Investing in Caprecon International Development Foundation means partnering with an organization that is deeply committed to creating lasting change in vulnerable communities. Here's why investors should consider joining forces with us:</p>
+                </div>
+                <div class="partner-list reveal-right">
+                    <div class="partner-item">
+                        <div class="partner-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="partner-content">
+                            <h4>Proven Track Record</h4>
+                            <p>Caprecon International Development Foundation has a solid history of successfully implementing impactful programs since 2007, demonstrating our capability to deliver results.</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="partner-content">
+                            <h4>Targeted Impact</h4>
+                            <p>We focus on the most vulnerable and marginalized communities, ensuring that investments directly contribute to uplifting those most in need.</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="partner-content">
+                            <h4>Holistic Approach</h4>
+                            <p>Our comprehensive strategy includes training, education, capacity building, advocacy, and consulting, offering investors a multi-faceted approach to development.</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="partner-content">
+                            <h4>Strong Partnerships</h4>
+                            <p>We collaborate with local, national, and international stakeholders, maximizing resources and expertise to enhance the effectiveness and reach of our initiatives.</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="partner-content">
+                            <h4>Innovation and Adaptability</h4>
+                            <p>Caprecon continuously adapts to changing conditions and challenges, ensuring that investments are used effectively to address emerging issues.</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="partner-content">
+                            <h4>Commitment to Social Justice</h4>
+                            <p>Partnering with Caprecon aligns investors with a mission dedicated to creating a more equitable and just world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <h2 class="section-title">Our Programs</h2>
+                <p class="section-subtitle">Caprecon is dedicated to causes that improve lives, and create a better world for those affected by instability, natural disasters, environmental adversities, unbearable poverty, and violent conflicts.</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card reveal-up">
+                    <div class="program-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="program-title">Poverty Alleviation</h3>
+                    <p class="program-description">We support individuals and groups impoverished by systemic and institutional neglect to grow a new life and become self-reliant.</p>
+                    <a href="#" class="program-link">Read More</a>
+                </div>
+                <div class="program-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="program-icon">
+                        <i data-lucide="handshake"></i>
+                    </div>
+                    <h3 class="program-title">Peace Building</h3>
+                    <p class="program-description">Conflict management, resolution and reconciliation can be arduous, but are not insurmountable, as the capacity to do so exist within communities.</p>
+                    <a href="#" class="program-link">Read More</a>
+                </div>
+                <div class="program-card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="program-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3 class="program-title">Gender Dignity and Equality</h3>
+                    <p class="program-description">In many parts of the world, female education is circumscribed by poverty, ignorance, cultural repression & restrictive traditions that inhibit women's mobility.</p>
+                    <a href="#" class="program-link">Read More</a>
+                </div>
+                <div class="program-card reveal-up" style="animation-delay: 0.3s;">
+                    <div class="program-icon">
+                        <i data-lucide="home"></i>
+                    </div>
+                    <h3 class="program-title">Refugee Care and Humanitarian Assistance</h3>
+                    <p class="program-description">We aim to minimise the trauma suffered by refugees, IDPs as a result of violent conflicts, natural disasters, displacements, and other emergency situations.</p>
+                    <a href="#" class="program-link">Read More</a>
+                </div>
+                <div class="program-card reveal-up" style="animation-delay: 0.4s;">
+                    <div class="program-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3 class="program-title">Community and Rural Development</h3>
+                    <p class="program-description">We empower rural dwellers, especially women, to escape poverty and improve their standard of living through basic education, health care, small scale businesses...</p>
+                    <a href="#" class="program-link">Read More</a>
+                </div>
+                <div class="program-card reveal-up" style="animation-delay: 0.5s;">
+                    <div class="program-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h3 class="program-title">Education for Sustainable Development</h3>
+                    <p class="program-description">We aim to empower people to work their way out of poverty through education and training. Sadly, many children are denied education for reasons, including...</p>
+                    <a href="#" class="program-link">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content reveal-up">
+                <div class="cta-text">
+                    <h2>Help Someone Today Or Join Us</h2>
+                    <p>Your financial help makes all this happen, and more.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="help.html" class="btn btn-secondary">
+                        <i data-lucide="heart"></i>
+                        Help
+                    </a>
+                    <a href="volunteers.html" class="btn btn-dark">
+                        <i data-lucide="user-plus"></i>
+                        Volunteer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Banner Section -->
+    <section class="team-banner">
+        <div class="team-banner-bg">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80" alt="Team">
+            <div class="team-banner-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="team-banner-content reveal-up">
+                <h2>We are not doing it alone</h2>
+                <p>We have a Robust Network of team Actively Promoting the Cause</p>
+                <a href="about.html" class="btn btn-primary">Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <span class="section-label">Office & Contacts</span>
+                    <h2 class="section-title">Contact Us</h2>
+                    <p>Let's join hands and build a better future together. Reach out to us through:</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Caprecon International Development Foundation</h4>
+                                <p>Phone: +44 7474279446</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>UK Address</h4>
+                                <p>18 Arran Court, Rothesay Road, Luton, Bedfordshire, England. LU1 1QU</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Nigeria Address</h4>
+                                <p>103. Yakubu Gowon Way, Ewarewah Complex Jos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-decoration reveal-right">
+                    <div class="contact-pattern"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon">
+                            <span class="logo-c">C</span>
+                            <span class="logo-ap">APRECON</span>
+                        </div>
+                        <span class="logo-foundation">FOUNDATION</span>
+                    </a>
+                    <p>Caprecon is built on the belief that every person has the right to design their own future. Through our initiatives, we provide them with the tools to do so</p>
+                    <div class="footer-social">
+                        <a href="https://web.facebook.com/dollin.holt" target="_blank" class="social-link">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/Caprecon_Fd" target="_blank" class="social-link">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dollinholt" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Important Links</h4>
+                    <ul>
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="volunteers.html">Become a Volunteer</a></li>
+                        <li><a href="help.html">Partner with us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="causes.html">Causes</a></li>
+                        <li><a href="about.html">Team Members</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:Info@caprecon.org">Info@caprecon.org</a></li>
+                        <li>+44 7474279446</li>
+                        <li><a href="contact.html">UK Address</a></li>
+                        <li><a href="contact.html">NG Address</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Caprecon Development and Humanitarian Foundation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

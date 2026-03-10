@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Donate - Caprecon International Development Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <span class="logo-c">C</span>
+                            <span class="logo-ap">APRECON</span>
+                        </div>
+                        <span class="logo-foundation">FOUNDATION</span>
+                    </a>
+                    <nav class="main-nav">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="causes.html" class="nav-link">Causes</a>
+                        <a href="programmes.html" class="nav-link">Programmes</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </nav>
+                    <a href="contact.html" class="btn btn-primary">Join Us</a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom-content">
+                    <nav class="secondary-nav">
+                        <a href="volunteers.html" class="secondary-link">Volunteer</a>
+                        <a href="blog.html" class="secondary-link">Our Blogs</a>
+                        <a href="events.html" class="secondary-link">Events</a>
+                        <a href="help.html" class="secondary-link active">Help</a>
+                    </nav>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/dollin.holt" target="_blank" class="social-link">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/Caprecon_Fd" target="_blank" class="social-link">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dollinholt" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="causes.html" class="mobile-nav-link">Causes</a>
+            <a href="programmes.html" class="mobile-nav-link">Programmes</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+            <a href="help.html" class="mobile-nav-link active">Help</a>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Help & Donate</h1>
+        </div>
+    </section>
+
+    <!-- Donation Hero -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="donation-hero reveal-up">
+                <div class="donation-hero-content">
+                    <h2>Your Support Changes Lives</h2>
+                    <p>Every donation, no matter how small, helps us create lasting change in vulnerable communities. Your contribution directly supports education, healthcare, and community development programs.</p>
+                    <div class="donation-impact">
+                        <div class="impact-item">
+                            <span class="impact-amount">£25</span>
+                            <span class="impact-desc">Provides school supplies for one child for a year</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-amount">£50</span>
+                            <span class="impact-desc">Funds a month of vocational training</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-amount">£100</span>
+                            <span class="impact-desc">Supports a family's emergency relief needs</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-amount">£250</span>
+                            <span class="impact-desc">Sponsors a child's education for a year</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="donation-form-wrapper">
+                    <div class="donation-form-header">
+                        <h3>Make a Donation</h3>
+                        <p>Choose an amount or enter your own</p>
+                    </div>
+                    <form class="donation-form" id="donationForm">
+                        <div class="donation-amounts">
+                            <button type="button" class="amount-btn" data-amount="25">£25</button>
+                            <button type="button" class="amount-btn" data-amount="50">£50</button>
+                            <button type="button" class="amount-btn active" data-amount="100">£100</button>
+                            <button type="button" class="amount-btn" data-amount="250">£250</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="customAmount">Other Amount</label>
+                            <div class="amount-input">
+                                <span class="currency">£</span>
+                                <input type="number" id="customAmount" name="customAmount" placeholder="Enter amount">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Donation Type</label>
+                            <div class="donation-type">
+                                <label class="type-option">
+                                    <input type="radio" name="donationType" value="one-time" checked>
+                                    <span>One-time</span>
+                                </label>
+                                <label class="type-option">
+                                    <input type="radio" name="donationType" value="monthly">
+                                    <span>Monthly</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="donorName">Full Name *</label>
+                            <input type="text" id="donorName" name="donorName" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="donorEmail">Email Address *</label>
+                            <input type="email" id="donorEmail" name="donorEmail" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="giftAid" name="giftAid">
+                            <label for="giftAid">I am a UK taxpayer and would like Caprecon to claim Gift Aid on this donation</label>
+                        </div>
+                        <button type="submit" class="btn btn-secondary btn-large btn-full">
+                            <i data-lucide="heart"></i>
+                            Donate Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Help -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Ways to Help</h2>
+                <p class="section-subtitle">There are many ways you can support our mission.</p>
+            </div>
+            <div class="ways-to-help-grid">
+                <div class="way-to-help reveal-up">
+                    <div class="way-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3>Make a Donation</h3>
+                    <p>Support our programs with a one-time or recurring donation. Every contribution makes a difference.</p>
+                    <a href="#donationForm" class="btn btn-primary">Donate Now</a>
+                </div>
+                <div class="way-to-help reveal-up" style="animation-delay: 0.1s;">
+                    <div class="way-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Become a Volunteer</h3>
+                    <p>Share your time and skills to help us achieve our mission. Join our global volunteer community.</p>
+                    <a href="volunteers.html" class="btn btn-primary">Apply Now</a>
+                </div>
+                <div class="way-to-help reveal-up" style="animation-delay: 0.2s;">
+                    <div class="way-icon">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <h3>Partner With Us</h3>
+                    <p>Collaborate with us on projects, events, and initiatives. Let's create impact together.</p>
+                    <a href="#partner" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="way-to-help reveal-up" style="animation-delay: 0.3s;">
+                    <div class="way-icon">
+                        <i data-lucide="share-2"></i>
+                    </div>
+                    <h3>Spread the Word</h3>
+                    <p>Share our mission with your network. Follow us on social media and help amplify our voice.</p>
+                    <a href="#" class="btn btn-primary">Share</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="section-padding" id="partner">
+        <div class="container">
+            <div class="partnership-section reveal-up">
+                <div class="partnership-content">
+                    <h2>Partner With Caprecon</h2>
+                    <p>We believe in the power of collaboration. By partnering with Caprecon, your organization can make a meaningful impact on communities in need while achieving your corporate social responsibility goals.</p>
+                    <div class="partnership-benefits">
+                        <h3>Partnership Benefits:</h3>
+                        <ul>
+                            <li><i data-lucide="check"></i> Brand visibility across our global network</li>
+                            <li><i data-lucide="check"></i> Employee engagement opportunities</li>
+                            <li><i data-lucide="check"></i> Impact reports and success stories</li>
+                            <li><i data-lucide="check"></i> Joint marketing and PR opportunities</li>
+                            <li><i data-lucide="check"></i> Tax benefits for corporate donations</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:partnerships@caprecon.org" class="btn btn-secondary">
+                        <i data-lucide="mail"></i>
+                        Contact Partnerships Team
+                    </a>
+                </div>
+                <div class="partnership-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Partnership">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Partners -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Our Partners</h2>
+                <p class="section-subtitle">We are grateful for the support of our corporate partners.</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo reveal-up">
+                    <div class="partner-placeholder">UNICEF</div>
+                </div>
+                <div class="partner-logo reveal-up" style="animation-delay: 0.1s;">
+                    <div class="partner-placeholder">WHO</div>
+                </div>
+                <div class="partner-logo reveal-up" style="animation-delay: 0.2s;">
+                    <div class="partner-placeholder">Red Cross</div>
+                </div>
+                <div class="partner-logo reveal-up" style="animation-delay: 0.3s;">
+                    <div class="partner-placeholder">Save the Children</div>
+                </div>
+                <div class="partner-logo reveal-up" style="animation-delay: 0.4s;">
+                    <div class="partner-placeholder">Oxfam</div>
+                </div>
+                <div class="partner-logo reveal-up" style="animation-delay: 0.5s;">
+                    <div class="partner-placeholder">World Vision</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundraising Ideas -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Fundraising Ideas</h2>
+                <p class="section-subtitle">Get creative and raise funds for Caprecon in your community.</p>
+            </div>
+            <div class="fundraising-ideas-grid">
+                <div class="fundraising-idea reveal-up">
+                    <div class="idea-icon">
+                        <i data-lucide="cake"></i>
+                    </div>
+                    <h3>Bake Sale</h3>
+                    <p>Organize a bake sale at your workplace, school, or community center.</p>
+                </div>
+                <div class="fundraising-idea reveal-up" style="animation-delay: 0.1s;">
+                    <div class="idea-icon">
+                        <i data-lucide="trophy"></i>
+                    </div>
+                    <h3>Sports Event</h3>
+                    <p>Host a charity run, walk, or sports tournament.</p>
+                </div>
+                <div class="fundraising-idea reveal-up" style="animation-delay: 0.2s;">
+                    <div class="idea-icon">
+                        <i data-lucide="music"></i>
+                    </div>
+                    <h3>Concert or Show</h3>
+                    <p>Organize a benefit concert or talent show.</p>
+                </div>
+                <div class="fundraising-idea reveal-up" style="animation-delay: 0.3s;">
+                    <div class="idea-icon">
+                        <i data-lucide="gift"></i>
+                    </div>
+                    <h3>Birthday Campaign</h3>
+                    <p>Ask for donations instead of gifts for your birthday.</p>
+                </div>
+            </div>
+            <div class="fundraising-cta text-center reveal-up">
+                <p>Need help organizing your fundraiser?</p>
+                <a href="mailto:fundraising@caprecon.org" class="btn btn-secondary">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content reveal-up">
+                <div class="cta-text">
+                    <h2>Every Contribution Counts</h2>
+                    <p>Together, we can create a world where everyone lives with dignity and hope.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#donationForm" class="btn btn-secondary">
+                        <i data-lucide="heart"></i>
+                        Donate Now
+                    </a>
+                    <a href="contact.html" class="btn btn-dark">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon">
+                            <span class="logo-c">C</span>
+                            <span class="logo-ap">APRECON</span>
+                        </div>
+                        <span class="logo-foundation">FOUNDATION</span>
+                    </a>
+                    <p>Caprecon is built on the belief that every person has the right to design their own future. Through our initiatives, we provide them with the tools to do so</p>
+                    <div class="footer-social">
+                        <a href="https://web.facebook.com/dollin.holt" target="_blank" class="social-link">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/Caprecon_Fd" target="_blank" class="social-link">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dollinholt" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Important Links</h4>
+                    <ul>
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="volunteers.html">Become a Volunteer</a></li>
+                        <li><a href="help.html">Partner with us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="causes.html">Causes</a></li>
+                        <li><a href="about.html">Team Members</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:Info@caprecon.org">Info@caprecon.org</a></li>
+                        <li>+44 7474279446</li>
+                        <li><a href="contact.html">UK Address</a></li>
+                        <li><a href="contact.html">NG Address</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Caprecon Development and Humanitarian Foundation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
